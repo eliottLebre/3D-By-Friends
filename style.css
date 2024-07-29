@@ -8,6 +8,7 @@
 }
 
 body {
+  position: relative;
   width: 100vw;
   background-color: #d0d0d0;
   font-family: "Nunito", sans-serif;
@@ -64,6 +65,7 @@ main {
   gap: 15px;
   width: 100%;
   margin-bottom: 50px;
+  padding: 0 15px;
 }
 
 article {
@@ -72,7 +74,6 @@ article {
   max-width: 400px;
   background-color: rgba(185, 185, 185, 0.374);
   border-radius: 5px;
-  margin-top: 20px;
   box-shadow: 0px 1px 16px 3px #b5b5b5;
 }
 
@@ -126,8 +127,91 @@ article {
 .footer-nav-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   gap: 15px;
   height: 50px;
   overflow: hidden;
+}
+
+.footer-nav-content:last-child {
+  align-self: self-end;
+}
+
+.nav-botSide-items {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (min-width: 845px) {
+  header {
+    position: fixed;
+    height: 70px;
+    padding: 10px;
+    font-family: "Concert One", sans-serif;
+    color: aqua;
+    z-index: 2;
+  }
+  .topNav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    padding-left: 200px;
+    background-color: #d0d0d0fa;
+    border-bottom: solid 1px rgba(194, 194, 194, 0.97);
+    z-index: 1;
+  }
+
+  .nav-content {
+    max-width: none;
+    width: auto;
+    gap: 10px;
+    height: 50px;
+    padding: 0 10px;
+    overflow-x: auto;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 85px 15px 0 65px;
+  }
+
+  .footer-nav {
+    width: 50px;
+    background-color: #d0d0d0;
+    border-right: solid 1px rgba(194, 194, 194, 0.97);
+    position: fixed;
+    top: 70px;
+    left: 0px;
+  }
+
+  .footer-nav-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 30px 0;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+  }
+
+  .nav-botSide-items,
+  .user-profil {
+    width: 24px;
+    height: 24px;
+  }
+
+  .user-profil-contain {
+    position: absolute;
+    bottom: 20px;
+    left: 12.5px;
+  }
 }
